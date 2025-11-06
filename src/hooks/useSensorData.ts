@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { SensorReading } from '../types';
 
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL = 'http://3.110.54.193:5000';
 
 export function useSensorData(refreshInterval = 5000) {
   const [data, setData] = useState<SensorReading[]>([]);

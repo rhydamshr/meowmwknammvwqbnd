@@ -7,7 +7,7 @@ export function getLatestReadings(data: SensorReading[]) {
   return {
     temperature: latest.payload.temperature,
     humidity: latest.payload.humidity,
-    aqi: latest.payload.aqi,
+    aqi: latest.payload.aqi ?? latest.payload.ppm,
     co2: latest.payload.co2,
     pm25: latest.payload.pm25,
     pm10: latest.payload.pm10,

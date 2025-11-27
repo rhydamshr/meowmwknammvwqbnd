@@ -15,13 +15,13 @@ export function AQIDisplay({ aqi }: AQIDisplayProps) {
           <Wind className={`w-12 h-12 ${status.color}`} />
         </div>
         <div className="flex-1">
-          <p className="text-sm font-medium text-slate-600 mb-1">Air Quality Index</p>
+          <p className="text-sm font-medium text-slate-600 mb-1">MQ135 Value</p>
           <p className="text-5xl font-bold text-slate-900 mb-2">
             {aqi !== undefined ? Math.round(aqi) : '--'}
           </p>
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${status.bg}`}>
             <div className={`w-2 h-2 rounded-full ${status.color.replace('text-', 'bg-')} animate-pulse`}></div>
-            <span className={`text-sm font-semibold ${status.color}`}>{status.label}</span>
+            <span className={`text-sm font-semibold ${status.color}`}></span>
           </div>
         </div>
       </div>
